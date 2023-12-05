@@ -18,3 +18,20 @@
 .bookmark:hover {
   background-color: rgb(72, 55, 55);
 }
+
+/* Counters */
+.qcounter {
+  display: flex;
+  background-color: grey;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.bcounter {
+  display: flex;
+  background-color: grey;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
