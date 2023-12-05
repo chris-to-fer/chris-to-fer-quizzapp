@@ -12,11 +12,9 @@
   position: absolute;
   right: 0px;
   top: -7px;
-  .align-self: flex-end;
   background-color: inherit;
-  scale: 1;
   border: none;
 }
 .bookmark:hover {
-  color: rgb(0, 0, 0);
+  background-color: rgb(72, 55, 55);
 }

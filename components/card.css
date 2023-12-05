@@ -4,12 +4,12 @@
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  background-color: coral;
+  background-color: burlywood;
 
   border-radius: 10px;
 }
 .card-container:hover {
-  box-shadow: 0 10px 10px 0 rgb(241, 189, 170);
+  box-shadow: 0 10px 10px 0 rgb(192, 188, 186);
 }
 
 .card-article {
@@ -29,7 +29,7 @@
 
 li {
   background-color: dimgrey;
-  box-shadow: 0 10px 10px 0 rgb(232, 60, 60);
+  box-shadow: 0 10px 10px 0 rgb(164, 162, 162);
   border-radius: 10px;
   padding: 12px;
 }
