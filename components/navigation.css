@@ -1,0 +1,14 @@
+.footernav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: grey;
+  padding: 20px;
+}
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+a:hover {
+  color: coral;
+}
