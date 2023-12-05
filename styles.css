@@ -5,16 +5,16 @@
 @import url("./components/navigation.css");
 
 body {
-  width: 100vw;
-  height: 100vh;
+  .width: 100vw;
+  .height: 100vh;
   background-color: antiquewhite;
 }
 
 main {
-  width: 800px;
+  .width: 800px;
   background-color: bisque;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  height: 100vh;
+  justify-content: center;
+  .height: 100vh;
 }
