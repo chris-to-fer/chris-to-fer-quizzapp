@@ -1,0 +1,16 @@
+@import url("global.css");
+@import url("./components/button.css");
+@import url("./components/card.css");
+@import url("./components/header.css");
+@import url("./components/navigation.css");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+}
+
+main {
+  width: 800px;
+  background-color: bisque;
+}
