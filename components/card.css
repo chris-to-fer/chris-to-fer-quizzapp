@@ -5,8 +5,7 @@
   align-items: center;
   justify-self: center;
   background-color: coral;
-  .width: 80%;
-  .height: 20%;
+
   border-radius: 10px;
 }
 .card-container:hover {
@@ -14,7 +13,7 @@
 }
 
 .card-article {
-  padding: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
 }
