@@ -3,12 +3,12 @@
 @import url("./components/card.css");
 @import url("./components/header.css");
 @import url("./components/navigation.css");
+@import url("./components/switch.css");
 
 body {
   background-color: antiquewhite;
   display: flex;
   flex-direction: column;
-  .justify-content: center;
 }
 
 main {
@@ -16,7 +16,8 @@ main {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
+
   align-self: center;
   margin-bottom: 100px;
   width: 65%;
