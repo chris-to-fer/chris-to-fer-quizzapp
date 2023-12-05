@@ -1,4 +1,5 @@
 .card-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,16 +9,8 @@
   .height: 20%;
   border-radius: 10px;
 }
-
-.tags {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
-
-ul {
-  list-style-type: none;
+.card-container:hover {
+  box-shadow: 0 10px 10px 0 rgb(241, 189, 170);
 }
 
 .card-article {
@@ -26,6 +19,22 @@ ul {
   flex-direction: column;
 }
 
+/* Tags alias Categories */
 .tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
   padding: 10px;
+}
+
+li {
+  background-color: dimgrey;
+  box-shadow: 0 10px 10px 0 rgb(232, 60, 60);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+ul {
+  list-style-type: none;
 }
