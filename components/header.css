@@ -1,10 +1,17 @@
 header {
   display: flex;
   justify-content: center;
-  width: 65%;
+  width: 100%;
   background-color: grey;
   align-self: center;
 }
+
+@media (min-width: 900px) {
+  header {
+    width: 65%;
+  }
+}
+
 .title {
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
