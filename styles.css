@@ -36,7 +36,7 @@ footer {
   align-self: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   footer {
     width: 65%;
   }
@@ -68,4 +68,8 @@ footer {
 
 .profile-headlines {
   padding: 10px;
+}
+
+.profileimg {
+  width: 400px;
 }
