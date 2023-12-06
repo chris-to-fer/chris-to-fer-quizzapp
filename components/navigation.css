@@ -4,11 +4,11 @@
   background-color: grey;
   padding: 20px;
 }
-a {
+.a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-a:hover {
+.a:hover {
   color: coral;
 }
