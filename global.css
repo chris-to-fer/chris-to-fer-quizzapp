@@ -1,3 +1,10 @@
+:root {
+  --background: antiquewhite;
+  --cards: bisque;
+  --darkBackground: rgb(53, 52, 52);
+  --lightgrey: lightgrey;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,22 +16,15 @@ p {
 }
 
 a {
-background-color: grey;
+  background-color: lightgray;
 }
 
-a img{
-transition: scale 300ms ease-in-out;
-/*(-webkit-transition: opacity 0.3s;*/
+a img {
+  transition: scale 300ms ease-in-out;
+  /*(-webkit-transition: opacity 0.3s;*/
 }
 
 a:hover img {
-/*opacity: 0.9;*/
-scale: 1.28;
-}
-/*img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 90%;
+  /*opacity: 0.9;*/
+  scale: 1.28;
 }

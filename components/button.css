@@ -1,11 +1,12 @@
 .check {
+  background-color: var(--lightgrey);
   align-self: center;
   border-radius: 10px;
   padding: 20px;
 }
 
 .check:hover {
-  background-color: rgb(105, 101, 101);
+  background-color: rgb(227, 226, 226);
 }
 
 .bookmark {
@@ -17,6 +18,7 @@
 }
 
 .submit {
+  background-color: var(--lightgrey);
   padding: 10px;
   border-radius: 12px;
   display: flex;
@@ -30,12 +32,11 @@
   border-radius: 12px;
   display: flex;
   align-self: center;
-  box-shadow: 0 0px 0px 0px rgb(164, 162, 162);
-  transition: box-shadow 500ms ease-in-out;
+  box-shadow: none;
 }
 
 .submit:hover {
-  box-shadow: 0 10px 19px 6px rgb(164, 162, 162);
+  box-shadow: 0 5px 10px 2px rgb(164, 162, 162);
 }
 /*.bookmark:hover {
   background-color: rgb(72, 55, 55);
@@ -45,7 +46,7 @@
 /* Counters */
 .qcounter {
   display: flex;
-  background-color: grey;
+  background-color: var(--lightgrey);
   border-radius: 10px;
   padding: 10px;
   align-items: center;
@@ -53,7 +54,7 @@
 
 .bcounter {
   display: flex;
-  background-color: grey;
+  background-color: var(--lightgrey);
   border-radius: 10px;
   padding: 10px;
   align-items: center;
