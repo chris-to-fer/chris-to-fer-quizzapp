@@ -21,10 +21,8 @@ a {
 
 a img {
   transition: scale 300ms ease-in-out;
-  /*(-webkit-transition: opacity 0.3s;*/
 }
 
 a:hover img {
-  /*opacity: 0.9;*/
   scale: 1.28;
 }

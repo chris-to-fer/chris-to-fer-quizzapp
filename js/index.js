@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 */
 
-if (loc === "/profile.html") {
+if (loc === "profile.html") {
   darkSwitch.addEventListener("change", () => {
     localStorage.setItem("dark", this.checked);
     if (darkSwitch.checked) {
@@ -57,7 +57,7 @@ if (loc === "/profile.html") {
   });
 }
 
-if (loc === "/index.html" || loc === "/bookmark.html") {
+if (loc === "index.html" || loc === "/bookmark.html") {
   // Bookmark toggle activate
   let bCounter = 1;
   bbutton.addEventListener("click", () => {
@@ -85,7 +85,7 @@ if (loc === "/index.html" || loc === "/bookmark.html") {
   });
 }
 //form
-if (loc === "/form.html") {
+if (loc === "form.html") {
   const path = window.location.pathname;
 
   form.addEventListener("submit", (e) => {
@@ -158,9 +158,10 @@ if (loc === "/form.html") {
 }
 
 // sumbit button
-if (loc === "/.form.html") {
+if (loc === "form.html") {
   submitButton.addEventListener("click", () => {
     submitButton.classList.toggle("mousedown");
     console.log("test");
   });
 }
+console.log(loc);
