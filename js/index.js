@@ -1,6 +1,26 @@
 const loc = window.location.pathname;
 
-/*document.addEventListener("DOMContentLoaded", () => {
+const card = document.querySelector('["card-container"]');
+console.log(card);
+const darkSwitch = document.querySelector('[data-js="darkMode"]');
+const body = document.querySelector("body");
+const main = document.querySelector("main");
+
+const bbutton = document.querySelector('[data-js="bookmark"]');
+const bookmarkImage = document.querySelector('[data-js="bookmarkImage"]');
+
+const answerButton = document.querySelector('[data-js="answerButton"]');
+const answer = document.querySelector('[data-js="answerText"]');
+
+const form = document.querySelector('[data-js="addCards"]');
+const addQuestion = document.querySelector('[data-js="addQuestion"]');
+const addAnswer = document.querySelector('[data-js="addAnswer"]');
+const addTag = document.querySelector('[data-js="addTag"]');
+
+const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
+const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
+
+document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("dark")) {
     body.classList.add("dark");
     main.classList.add("dark");
@@ -13,22 +33,6 @@ const loc = window.location.pathname;
     darkSwitch.checked = false;
   }
 });
-*/
-const darkSwitch = document.querySelector('[data-js="darkMode"]');
-const body = document.querySelector("body");
-const main = document.querySelector("main");
-const card = document.getElementsByClassName("card-container");
-
-const bbutton = document.querySelector('[data-js="bookmark"]');
-const bookmarkImage = document.querySelector('[data-js="bookmarkImage"]');
-
-const answerButton = document.querySelector('[data-js="answerButton"]');
-const answer = document.querySelector('[data-js="answerText"]');
-
-const form = document.querySelector('[data-js="addCards"]');
-const addQuestion = document.querySelector('[data-js="addQuestion"]');
-const addAnswer = document.querySelector('[data-js="addAnswer"]');
-const addTag = document.querySelector('[data-js="addTag"]');
 
 if (loc === "/profile.html") {
   darkSwitch.addEventListener("change", () => {
@@ -77,51 +81,72 @@ if (loc === "/index.html" || loc === "/bookmark.html") {
   });
 }
 //form
-const path = window.location.pathname;
+if (loc === "/form.html") {
+  const path = window.location.pathname;
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const section = document.createElement("section");
-  section.classList.add("card-container");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const section = document.createElement("section");
+    section.classList.add("card-container");
 
-  const newBookmark = document.createElement("button");
-  //newBookmark.setAttribute('data-js="bookmark"');
-  newBookmark.classList.add("bookmark");
-  section.append(newBookmark);
+    const newBookmark = document.createElement("button");
+    //newBookmark.setAttribute('data-js="bookmark"');
+    newBookmark.classList.add("bookmark");
+    section.append(newBookmark);
 
-  const newBookImage = document.createElement("img");
-  newBookImage.src = "./components/bmw.png";
-  newBookmark.append(newBookImage);
+    const newBookImage = document.createElement("img");
+    newBookImage.src = "./components/bmw.png";
+    newBookmark.append(newBookImage);
 
-  const newArticle = document.createElement("article");
-  newArticle.classList.add("card-article");
-  section.append(newArticle);
+    const newArticle = document.createElement("article");
+    newArticle.classList.add("card-article");
+    section.append(newArticle);
 
-  const newQuestion = document.createElement("p");
-  newArticle.append(newQuestion);
-  newQuestion.textContent = addQuestion.value;
+    const newQuestion = document.createElement("p");
+    newArticle.append(newQuestion);
+    newQuestion.textContent = addQuestion.value;
 
-  const newAnswerButton = document.createElement("button");
-  newAnswerButton.classList.add("check");
-  newAnswerButton.textContent = "Show Answer";
-  newArticle.append(newAnswerButton);
+    const newAnswerButton = document.createElement("button");
+    newAnswerButton.classList.add("check");
+    newAnswerButton.textContent = "Show Answer";
+    newArticle.append(newAnswerButton);
 
-  const newAnswerText = document.createElement("p");
-  newAnswerText.classList.add("solution");
-  newAnswerText.setAttribute("hidden", "");
-  newAnswerText.textContent = addAnswer.value;
-  newArticle.append(newAnswerText);
+    const newAnswerText = document.createElement("p");
+    newAnswerText.classList.add("solution");
+    newAnswerText.setAttribute("hidden", "");
+    newAnswerText.textContent = addAnswer.value;
+    newArticle.append(newAnswerText);
 
-  const newTagsContainer = document.createElement("p");
-  newTagsContainer.classList.add("tags-container");
-  section.append(newTagsContainer);
+    const newTagsContainer = document.createElement("p");
+    newTagsContainer.classList.add("tags-container");
+    section.append(newTagsContainer);
 
-  const newTags = document.createElement("ul");
-  newTags.classList.add("tags");
-  newTags.textContent = addTag.value;
-  newTagsContainer.append(newTags);
+    const newTags = document.createElement("ul");
+    newTags.classList.add("tags");
+    newTagsContainer.append(newTags);
 
-  newArticle.append(newAnswerButton);
+    const newList = document.createElement("li");
+    newList.textContent = addTag.value;
+    newTags.append(newList);
 
-  main.append(section);
-});
+    newArticle.append(newAnswerButton);
+
+    main.append(section);
+    form.reset();
+  });
+
+  // Character Counts to textfields
+
+  function charsCount(field) {
+    field.textContent = `${150 - addQuestion.value.length} characters left
+  `;
+  }
+
+  addQuestion.addEventListener("input", () => {
+    charsCount(charsQuestion);
+  });
+
+  addAnswer.addEventListener("input", () => {
+    charsCount(charsAnswer);
+  });
+}
