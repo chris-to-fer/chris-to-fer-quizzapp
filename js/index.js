@@ -158,8 +158,9 @@ if (loc === "/form.html") {
 }
 
 // sumbit button
-
-submitButton.addEventListener("click", () => {
-  submitButton.classList.toggle("mousedown");
-  console.log("test");
-});
+if (loc === "/.form.html") {
+  submitButton.addEventListener("click", () => {
+    submitButton.classList.toggle("mousedown");
+    console.log("test");
+  });
+}
