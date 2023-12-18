@@ -59,6 +59,9 @@ form {
   display: flex;
   align-self: flex-end;
 }
+.red {
+  color: red;
+}
 
 /* profile Page */
 
