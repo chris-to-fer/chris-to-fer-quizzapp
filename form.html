@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="title">
+        <h1>Quiz App</h1>
+      </section>
+      <nav></nav>
+    </header>
+    <main>
+      <form action="" data-js="addCards" name="addCards" id="addCards">
+        <label for="addQuestion">Your Question:</label>
+        <textarea
+          data-js="addQuestion"
+          name="addQuestion"
+          id="addQuestion"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <label for="addAnswer">Your answer:</label>
+        <textarea
+          data-js="addAnswer"
+          name="addAnswer"
+          id="addAnswer"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <label for="addTag">Tag:</label>
+        <input data-js="addTag" type="text" id="addTag" name="addTag" />
+
+        <button
+          aria-label="submit button"
+          name="submitButton"
+          id="sumbitButton"
+          type="submit"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </main>
+    <footer>
+      <nav class="footernav" aria-labelledby="website navigation">
+        <a href="index.html" alt="homelink">
+          <img src="./components/homebl.png" alt="home" />
+        </a>
+        <a href="./bookmarks.html" alt="bookmarkedlink">
+          <img src="./components/bmw.png" alt="bookmarks" />
+        </a>
+        <a href="form.html" alt="addNewCard">
+          <img src="./components/plusw.png" alt="addCard" />
+        </a>
+        <a href="profile.html" alt="profilelink">
+          <img src="./components/profile-small.png" alt="profile" />
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

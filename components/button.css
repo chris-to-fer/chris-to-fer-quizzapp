@@ -15,9 +15,10 @@
   background-color: inherit;
   border: none;
 }
-.bookmark:hover {
+/*.bookmark:hover {
   background-color: rgb(72, 55, 55);
 }
+*/
 
 /* Counters */
 .qcounter {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -17,15 +18,15 @@
     </header>
     <main>
         <section class="card-container">
-            <button class="bookmark" aria-label="click to bookmark">
-                <img src="./components/bmw.png" alt="bookmark">
+            <button data-js="bookmark" class="bookmark" aria-label="click to bookmark">
+                <img src="./components/bmw.png" alt="bookmark" data-js="bookmarkImage">
             </button>
             <article class="card-article">
                 
                <p> What does CSS stand for?</p>
-               <button class="check" aria-label="click to see solution">Show Answer</button>
+               <button data-js="answerButton" class="check" aria-label="click to see solution">Show Answer</button>
                <button hidden class="check" aria-label="click to hide solution">Hide Answer</button>
-               <p hidden class="solution">Cascading Style Sheets</p>
+               <p hidden data-js="answerText" class="solution">Cascading Style Sheets</p>
 
 
             </article>
@@ -47,7 +48,7 @@
                <button hidden class="check" aria-label="click to see solution">Show Answer</button>
                <button class="check" aria-label="click to see solution">Show Answer</button>
                <button hidden class="check" aria-label="click to hide solution">Hide Answer</button>
-               <p hidden class="solution" >&lt;link&gt;</p>
+               <p  hidden class="solution" >&lt;link&gt;</p>
 
 
             </article>
@@ -139,6 +140,9 @@
 <a href="./bookmarks.html" alt="bookmarkedlink">
     <img src="./components/bmw.png" alt="bookmarks">
 </a>
+<a href="./form.html" alt="addNewCard">
+    <img src="./components/plusb.png" alt="addCard" />
+  </a>
 <a href="profile.html" alt="profilelink">
     <img src="./components/profile-small.png" alt="profile">
 </a>
