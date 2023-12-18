@@ -20,6 +20,7 @@ const addTag = document.querySelector('[data-js="addTag"]');
 const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
 const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
 // storage for dark mode
+/*
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("dark")) {
     //darkSwitch.checked = true;
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //card.classList.remove("darkcard");
   }
 });
+*/
 
 if (loc === "/profile.html") {
   darkSwitch.addEventListener("change", () => {
@@ -40,13 +42,13 @@ if (loc === "/profile.html") {
     if (darkSwitch.checked) {
       body.classList.add("dark");
       main.classList.add("dark");
-      card.classList.add("darkcard");
+      //card.classList.add("darkcard");
       //card.sytle.backgrounfColor = "dimgray";
     } else {
       localStorage.removeItem("dark");
       body.classList.remove("dark");
       main.classList.remove("dark");
-      card.classList.remove("darkcard");
+      //card.classList.remove("darkcard");
       //card.style.backgroundColor = burlywood;
     }
   });
