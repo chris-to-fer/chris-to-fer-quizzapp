@@ -44,13 +44,13 @@ if (loc === "/profile.html") {
     localStorage.setItem("dark", this.checked);
     if (darkSwitch.checked) {
       body.classList.add("dark");
-      main.classList.add("dark");
+      main.classList.add("bark");
       //card.classList.add("darkcard");
       //card.sytle.backgrounfColor = "dimgray";
     } else {
       localStorage.removeItem("dark");
       body.classList.remove("dark");
-      main.classList.remove("dark");
+      main.classList.remove("bark");
       //card.classList.remove("darkcard");
       //card.style.backgroundColor = burlywood;
     }

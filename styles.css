@@ -6,24 +6,30 @@
 @import url("./components/switch.css");
 
 body {
-  background-color: antiquewhite;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
 }
 .dark {
-  background-color: rgb(53, 52, 52);
+  background-color: var(--darkBackground);
+  color: white;
+}
+.bark {
+  background-color: rgb(170, 167, 167);
   color: white;
 }
 
 main {
-  background-color: bisque;
+  border-radius: 12px;
+  background-color: var(--background);
   display: flex;
   gap: 10px;
   flex-direction: column;
   /*justify-content: center;*/
 
   align-self: center;
-  margin-bottom: 100px;
+  margin-bottom: 110px;
+  margin-top: 10px;
   width: 65%;
 }
 

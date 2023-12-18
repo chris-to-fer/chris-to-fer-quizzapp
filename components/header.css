@@ -2,8 +2,9 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: grey;
+  background-color: var(--lightgrey);
   align-self: center;
+  border-radius: 12px;
 }
 
 @media (min-width: 600px) {
