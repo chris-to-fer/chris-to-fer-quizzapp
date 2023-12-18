@@ -8,6 +8,9 @@
 
   border-radius: 10px;
 }
+.darkcard {
+  background-color: dimgray;
+}
 .card-container:hover {
   box-shadow: 0 10px 10px 0 rgb(192, 188, 186);
 }
