@@ -1,7 +1,7 @@
 const loc = window.location.pathname;
 
 const card = document.querySelector(".card-container");
-console.log(card);
+
 const darkSwitch = document.querySelector('[data-js="darkMode"]');
 const body = document.querySelector("body");
 const main = document.querySelector("main");
@@ -19,18 +19,18 @@ const addTag = document.querySelector('[data-js="addTag"]');
 
 const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
 const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
-
+// storage for dark mode
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("dark")) {
+    //darkSwitch.checked = true;
     body.classList.add("dark");
     main.classList.add("dark");
-    card.classList.add("darkcard");
-    darkSwitch.checked = true;
+    //card.classList.add("darkcard");
   } else {
+    //darkSwitch.checked = false;
     body.classList.remove("dark");
     main.classList.remove("dark");
-    card.classList.remove("darkcard");
-    darkSwitch.checked = false;
+    //card.classList.remove("darkcard");
   }
 });
 
@@ -68,7 +68,6 @@ if (loc === "/index.html" || loc === "/bookmark.html") {
   //answer toggle activate
   let aCounter = 1;
   answerButton.addEventListener("click", () => {
-    console.log("test");
     if (aCounter % 2 != 0) {
       answer.removeAttribute("hidden");
       answerButton.textContent = "Hide answer";
