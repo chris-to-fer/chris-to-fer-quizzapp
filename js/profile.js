@@ -21,41 +21,47 @@ const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
 const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
 
 const submitButton = document.querySelector('[data-js="submitBtn"]');
-
+const profileContainer = document.getElementById("kacke");
 // storage for dark mode
 /*
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("dark")) {
-    //darkSwitch.checked = true;
+    darkSwitch.checked = true;
     body.classList.add("dark");
     main.classList.add("dark");
+    profileContainer.classList.add("dark");
     //card.classList.add("darkcard");
   } else {
-    //darkSwitch.checked = false;
+    darkSwitch.checked = false;
     body.classList.remove("dark");
     main.classList.remove("dark");
+    profileContainer.classList.remove("dark");
     //card.classList.remove("darkcard");
   }
 });
 */
 
-if (loc === "profile.html") {
-  darkSwitch.addEventListener("change", () => {
-    localStorage.setItem("dark", this.checked);
-    if (darkSwitch.checked) {
-      body.classList.add("dark");
-      main.classList.add("bark");
-      //card.classList.add("darkcard");
-      //card.sytle.backgrounfColor = "dimgray";
-    } else {
-      localStorage.removeItem("dark");
-      body.classList.remove("dark");
-      main.classList.remove("bark");
-      //card.classList.remove("darkcard");
-      //card.style.backgroundColor = burlywood;
-    }
-  });
-}
+darkSwitch.addEventListener("change", () => {
+  //localStorage.setItem("dark", this.checked);
+  if (darkSwitch.checked) {
+    body.classList.add("dark");
+    main.classList.add("dark");
+    // profileContainer.classList.remove("profile-container");
+    // profileContainer.classList.add("dark");
+    //card.classList.add("darkcard");
+    profileContainer.style.backgroundColor = "dimgray";
+  } else {
+    //localStorage.removeItem("dark");
+    body.classList.remove("dark");
+    main.classList.remove("dark");
+    // profileContainer.classList.remove("dark");
+    // profileContainer.classList.add("profile-container");
+    //card.classList.remove("darkcard");
+    profileContainer.style.backgroundColor = "var(--cards)";
+  }
+});
+
+/*
 
 // Bookmark toggle activate
 let bCounter = 1;
@@ -83,7 +89,6 @@ answerButton.addEventListener("click", () => {
   }
 });
 
-/*
 
 //form
 
@@ -160,11 +165,11 @@ if (loc === "form.html") {
 }
 
 // sumbit button
-if (loc === "form.html") {
+
   submitButton.addEventListener("click", () => {
     submitButton.classList.toggle("mousedown");
     console.log("test");
   });
-}
+
 console.log(loc);
 */
