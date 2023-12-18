@@ -19,6 +19,9 @@ const addTag = document.querySelector('[data-js="addTag"]');
 
 const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
 const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
+
+const submitButton = document.querySelector('[data-js="submitBtn"]');
+
 // storage for dark mode
 /*
 document.addEventListener("DOMContentLoaded", () => {
@@ -130,7 +133,7 @@ if (loc === "/form.html") {
     newList.textContent = addTag.value;
     newTags.append(newList);
 
-    newArticle.append(newAnswerButton);
+    //newArticle.append(newAnswerButton);
 
     main.append(section);
     form.reset();
@@ -153,3 +156,10 @@ if (loc === "/form.html") {
       : charsAnswer.classList.remove("red");
   });
 }
+
+// sumbit button
+
+submitButton.addEventListener("click", () => {
+  submitButton.classList.toggle("mousedown");
+  console.log("test");
+});
