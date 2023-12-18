@@ -15,6 +15,28 @@
   background-color: inherit;
   border: none;
 }
+
+.submit {
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-self: center;
+  box-shadow: 0 5px 10px 1px rgb(164, 162, 162);
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.mousedown {
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-self: center;
+  box-shadow: 0 0px 0px 0px rgb(164, 162, 162);
+  transition: box-shadow 500ms ease-in-out;
+}
+
+.submit:hover {
+  box-shadow: 0 10px 19px 6px rgb(164, 162, 162);
+}
 /*.bookmark:hover {
   background-color: rgb(72, 55, 55);
 }
