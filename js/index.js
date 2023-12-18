@@ -1,6 +1,6 @@
 const loc = window.location.pathname;
 
-const card = document.querySelector('["card-container"]');
+const card = document.querySelector(".card-container");
 console.log(card);
 const darkSwitch = document.querySelector('[data-js="darkMode"]');
 const body = document.querySelector("body");
@@ -137,16 +137,18 @@ if (loc === "/form.html") {
 
   // Character Counts to textfields
 
-  function charsCount(field) {
-    field.textContent = `${150 - addQuestion.value.length} characters left
-  `;
-  }
-
   addQuestion.addEventListener("input", () => {
-    charsCount(charsQuestion);
+    charsQuestion.textContent =
+      150 - addQuestion.value.length + " characters left";
+    addQuestion.value.length === 150
+      ? charsQuestion.classList.add("red")
+      : charsQuestion.classList.remove("red");
   });
 
   addAnswer.addEventListener("input", () => {
-    charsCount(charsAnswer);
+    charsAnswer.textContent = 150 - addAnswer.value.length + " characters left";
+    addAnswer.value.length === 150
+      ? charsAnswer.classList.add("red")
+      : charsAnswer.classList.remove("red");
   });
 }
