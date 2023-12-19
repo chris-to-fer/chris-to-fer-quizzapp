@@ -4,21 +4,15 @@ const darkSwitch = document.querySelector('[data-js="darkMode"]');
 const body = document.querySelector("body");
 const main = document.querySelector("main");
 
-const bbutton = document.querySelector('[data-js="bookmark"]');
-const bookmarkImage = document.querySelector('[data-js="bookmarkImage"]');
-
-const answerButton = document.querySelector('[data-js="answerButton"]');
-const answer = document.querySelector('[data-js="answerText"]');
-
 const form = document.querySelector('[data-js="addCards"]');
 const addQuestion = document.querySelector('[data-js="addQuestion"]');
 const addAnswer = document.querySelector('[data-js="addAnswer"]');
 const addTag = document.querySelector('[data-js="addTag"]');
 
+const submitButton = document.querySelector('[data-js="submitBtn"]');
+
 const charsQuestion = document.querySelector('[data-js="questionCharsLeft"]');
 const charsAnswer = document.querySelector('[data-js="answerCharsLeft"]');
-
-const submitButton = document.querySelector('[data-js="submitBtn"]');
 
 // storage for dark mode
 /*
@@ -136,14 +130,56 @@ form.addEventListener("submit", (e) => {
   newList.textContent = addTag.value;
   newTags.append(newList);
 
-  //newArticle.append(newAnswerButton);
-
   main.append(section);
+
+  //bookmark toggle
+  const bookmarkImage = document.querySelector('[data-js="bookmarkImage"]');
+  const bbutton = document.querySelector('[data-js="bookmark"]');
+
+  bbutton.addEventListener("click", (e) => {
+    if (bookmarkImage.src.match("bmw.png")) {
+      bookmarkImage.src = "./components/bm.png";
+    } else if (bookmarkImage.src.match("bm.png")) {
+      bookmarkImage.src = "./components/bmw.png";
+    }
+  });
+
+  //answer toggle activate
+  const answerButton = document.querySelector('[data-js="answerButton"]');
+  const answer = document.querySelector('[data-js="answerText"]');
+
+  let aCounter = 1;
+  answerButton.addEventListener("click", (e) => {
+    if (aCounter % 2 != 0) {
+      answer.removeAttribute("hidden");
+      answerButton.textContent = "Hide answer";
+      aCounter++;
+    } else {
+      answer.setAttribute("hidden", "");
+      answerButton.textContent = "Show answer";
+      aCounter--;
+    }
+  });
+
+  charsAnswer.textContent = "";
+  charsQuestion.textContent = "";
   form.reset();
 });
 
 // Character Counts to textfields
 
+function countChars(inputField, output) {
+  inputField.addEventListener("input", () => {
+    output.textContent = 150 - inputField.value.length + " characters left";
+    inputField.value.length === 150
+      ? output.classList.add("red")
+      : output.classList.remove("red");
+  });
+}
+
+countChars(addQuestion, charsQuestion);
+countChars(addAnswer, charsAnswer);
+/*
 addQuestion.addEventListener("input", () => {
   charsQuestion.textContent =
     150 - addQuestion.value.length + " characters left";
@@ -152,40 +188,11 @@ addQuestion.addEventListener("input", () => {
     : charsQuestion.classList.remove("red");
 });
 
+
 addAnswer.addEventListener("input", () => {
   charsAnswer.textContent = 150 - addAnswer.value.length + " characters left";
   addAnswer.value.length === 150
     ? charsAnswer.classList.add("red")
     : charsAnswer.classList.remove("red");
 });
-
-/*
-submitButton.addEventListener("mousedown", () => {
-  submitButton.classList.toggle("mousedown");
-  console.log("test");
-});
 */
-
-// tryout button logics on form page
-//let bCounter = 1;
-bbutton.addEventListener("click", () => {
-  if (bookmarkImage.src.match("bmw.png")) {
-    bookmarkImage.src = "./components/bm.png";
-  } else if (bookmarkImage.src.match("bm.png")) {
-    bookmarkImage.src = "./components/bmw.png";
-  }
-});
-
-//answer toggle activate
-let aCounter = 1;
-answerButton.addEventListener("click", () => {
-  if (aCounter % 2 != 0) {
-    answer.removeAttribute("hidden");
-    answerButton.textContent = "Hide answer";
-    aCounter++;
-  } else {
-    answer.setAttribute("hidden", "");
-    answerButton.textContent = "Show answer";
-    aCounter--;
-  }
-});
