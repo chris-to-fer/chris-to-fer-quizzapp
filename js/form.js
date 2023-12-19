@@ -94,12 +94,13 @@ form.addEventListener("submit", (e) => {
   section.classList.add("card-container");
 
   const newBookmark = document.createElement("button");
-  //newBookmark.setAttribute('data-js="bookmark"');
+  newBookmark.setAttribute("data-js", "bookmark");
   newBookmark.classList.add("bookmark");
   section.append(newBookmark);
 
   const newBookImage = document.createElement("img");
   newBookImage.src = "./components/bmw.png";
+  newBookImage.setAttribute("data-js", "bookmarkImage");
   newBookmark.append(newBookImage);
 
   const newArticle = document.createElement("article");
@@ -113,11 +114,13 @@ form.addEventListener("submit", (e) => {
   const newAnswerButton = document.createElement("button");
   newAnswerButton.classList.add("check");
   newAnswerButton.textContent = "Show Answer";
+  newAnswerButton.setAttribute("data-js", "answerButton");
   newArticle.append(newAnswerButton);
 
   const newAnswerText = document.createElement("p");
   newAnswerText.classList.add("solution");
   newAnswerText.setAttribute("hidden", "");
+  newAnswerText.setAttribute("data-js", "answerText");
   newAnswerText.textContent = addAnswer.value;
   newArticle.append(newAnswerText);
 
@@ -162,3 +165,27 @@ submitButton.addEventListener("mousedown", () => {
   console.log("test");
 });
 */
+
+// tryout button logics on form page
+//let bCounter = 1;
+bbutton.addEventListener("click", () => {
+  if (bookmarkImage.src.match("bmw.png")) {
+    bookmarkImage.src = "./components/bm.png";
+  } else if (bookmarkImage.src.match("bm.png")) {
+    bookmarkImage.src = "./components/bmw.png";
+  }
+});
+
+//answer toggle activate
+let aCounter = 1;
+answerButton.addEventListener("click", () => {
+  if (aCounter % 2 != 0) {
+    answer.removeAttribute("hidden");
+    answerButton.textContent = "Hide answer";
+    aCounter++;
+  } else {
+    answer.setAttribute("hidden", "");
+    answerButton.textContent = "Show answer";
+    aCounter--;
+  }
+});

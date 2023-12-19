@@ -78,7 +78,6 @@ bbutton.addEventListener("click", () => {
     bookmarkImage.src = "./components/bmw.png";
   }
 });
-console.log(bookmarkImage.src);
 
 //answer toggle activate
 let aCounter = 1;
