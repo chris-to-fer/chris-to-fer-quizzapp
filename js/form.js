@@ -51,35 +51,6 @@ if (loc === "profile.html") {
 
 */
 
-/*
-  // Bookmark toggle activate
-  let bCounter = 1;
-  bbutton.addEventListener("click", () => {
-    if (bCounter % 2 != 0) {
-      bookmarkImage.src = "./components/bm.png";
-      bCounter++;
-    } else {
-      bookmarkImage.src = "./components/bmw.png";
-      bCounter--;
-    }
-  });
-
-  //answer toggle activate
-  let aCounter = 1;
-  answerButton.addEventListener("click", () => {
-    if (aCounter % 2 != 0) {
-      answer.removeAttribute("hidden");
-      answerButton.textContent = "Hide answer";
-      aCounter++;
-    } else {
-      answer.setAttribute("hidden", "");
-      answerButton.textContent = "Show answer";
-      aCounter--;
-    }
-  });
-
-  */
-
 //form
 
 form.addEventListener("submit", (e) => {
@@ -132,7 +103,7 @@ form.addEventListener("submit", (e) => {
 
   main.append(section);
 
-  //bookmark toggle
+  //bookmark toggle activate
   const bookmarkImage = document.querySelector('[data-js="bookmarkImage"]');
   const bbutton = document.querySelector('[data-js="bookmark"]');
 
@@ -179,6 +150,8 @@ function countChars(inputField, output) {
 
 countChars(addQuestion, charsQuestion);
 countChars(addAnswer, charsAnswer);
+
+//legacy chars count
 /*
 addQuestion.addEventListener("input", () => {
   charsQuestion.textContent =
