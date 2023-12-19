@@ -156,9 +156,9 @@ addAnswer.addEventListener("input", () => {
     : charsAnswer.classList.remove("red");
 });
 
-// sumbit button
-
-submitButton.addEventListener("click", () => {
+/*
+submitButton.addEventListener("mousedown", () => {
   submitButton.classList.toggle("mousedown");
   console.log("test");
 });
+*/
