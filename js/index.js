@@ -73,9 +73,9 @@ bbutton.addEventListener("click", () => {
 //let bCounter = 1;
 bbutton.addEventListener("click", () => {
   if (bookmarkImage.src.match("bmw.png")) {
-    bookmarkImage.src = "/components/bm.png";
+    bookmarkImage.src = "./components/bm.png";
   } else if (bookmarkImage.src.match("bm.png")) {
-    bookmarkImage.src = "/components/bmw.png";
+    bookmarkImage.src = "./components/bmw.png";
   }
 });
 console.log(bookmarkImage.src);
