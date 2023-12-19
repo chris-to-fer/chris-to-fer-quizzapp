@@ -58,6 +58,7 @@ if (loc === "profile.html") {
 }
 
 // Bookmark toggle activate
+/*
 let bCounter = 1;
 bbutton.addEventListener("click", () => {
   if (bCounter % 2 != 0) {
@@ -68,6 +69,16 @@ bbutton.addEventListener("click", () => {
     bCounter--;
   }
 });
+*/
+//let bCounter = 1;
+bbutton.addEventListener("click", () => {
+  if (bookmarkImage.src.match("bmw.png")) {
+    bookmarkImage.src = "/components/bm.png";
+  } else if (bookmarkImage.src.match("bm.png")) {
+    bookmarkImage.src = "/components/bmw.png";
+  }
+});
+console.log(bookmarkImage.src);
 
 //answer toggle activate
 let aCounter = 1;
